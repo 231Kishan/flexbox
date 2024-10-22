@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout with Logo and Scroll</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between; 
+            background-color: #f4f4f4; 
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px; 
+            margin-right: 10px;
+        }
+
+        .nav {
+            width: 100%;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: space-around; 
+            list-style-type: none; 
+            padding: 10px 0;
+            background-color: #007BFF;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .nav-item:hover {
+            background-color: #0056b3;
+            transition: background-color 0.3s ease;
+        }
+
+        
+        .courses {
+            position: relative;
+        }
+
+        .courses .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0);
+            max-height: 150px;
+            overflow-y: auto; 
+            z-index: 1;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ddd;
+        }
+
+        .courses:hover .dropdown-content {
+            display: block;
+        }
+
+    
+        .login {
+            background-color: red;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        
+        <div class="logo">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="Masai Logo">
+            <h1>Masai</h1>
+        </div>
+    
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item courses">COURSES
+                    
+                    <div class="dropdown-content">
+                        <p>Full Stack Web Development</p>
+                        <p>Data Analytics</p>
+                        <p>Product Management</p>
+                        <p>UX/UI Design</p>
+                    </div>
+                </li>
+                <li class="nav-item">FEES & ISA</li>
+                <li class="nav-item">ABOUT US</li>
+                <li class="nav-item">HIRE FROM US</li>
+                <li class="nav-item">FAQ</li>
+                <li class="nav-item">EVENTS</li>
+                <li class="nav-item">REFER & EARN</li>
+                <li class="nav-item login">LOGIN</li> 
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
